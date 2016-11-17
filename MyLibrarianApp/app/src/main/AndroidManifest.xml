@@ -19,7 +19,8 @@
         <activity android:name=".settings" />
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SecondQuizPage"></activity>
+        <activity android:name=".SecondQuizPage" />
+        <activity android:name=".PageAfterQuiz"></activity>
     </application>
 
 </manifest>
