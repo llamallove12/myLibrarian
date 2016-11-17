@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import java.util.List;
+import java.util.Objects;
 
 public class login extends AppCompatActivity {
 
@@ -31,18 +33,38 @@ public class login extends AppCompatActivity {
 
                 String email = editEmail.getText().toString();
                 String password = editPassword.getText().toString();
-                if(password.equals("password") && email.equals("susan@gmail.com")){
-                    Intent nextScreen = new Intent(v.getContext(),MainActivity.class);
-                    startActivity(nextScreen);
-
+                UserDB udb = new UserDB(getApplicationContext());
+                List<User> allUsers = udb.getAllUsers();
+                boolean inDB = false;
+                User currentUser = null;
+                for(User u : allUsers) {
+                    if(Objects.equals(u.getUserEmail(), email)) {
+                        inDB = true;
+                        currentUser = u;
+                    }
+                }
+                if(inDB) {
+                    if(!Objects.equals(currentUser.getUserPassword(), password)) {
+                        Toast.makeText(v.getContext(), "Incorrect Password", Toast.LENGTH_LONG).show();
+                        //editEmail.setText("");
+                        editPassword.setText("");
+                    }
+                    else {
+                        Intent nextScreen = new Intent(v.getContext(), MainActivity.class);
+                        startActivity(nextScreen);
+                        // TODO Add global variable
+                    }
                 }
 
                 else{
+                    // Example for global user
                     AppVars mApp = ((AppVars)getApplicationContext());
                     mApp.setUser(1);
                     int globalVarValue = mApp.getUser();
+                    //Toast.makeText(v.getContext(),""+globalVarValue,3).show();
 
-                    Toast.makeText(v.getContext(),""+globalVarValue,3).show();
+
+                    Toast.makeText(v.getContext(),"User Not Found",Toast.LENGTH_LONG).show();
                     editEmail.setText("");
                     editPassword.setText("");
                 }
