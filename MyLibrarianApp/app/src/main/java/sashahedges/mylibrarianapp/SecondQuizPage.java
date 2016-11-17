@@ -18,6 +18,7 @@ public class SecondQuizPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_quiz_page);
         final Button addButton = (Button) findViewById(R.id.AddButton);
+        final Button finishButton = (Button) findViewById(R.id.FinishButton);
         final EditText nameBook = (EditText) findViewById(R.id.nameBook);
 
 
@@ -38,6 +39,20 @@ public class SecondQuizPage extends AppCompatActivity {
                 }
 
 
+
+        );
+
+        finishButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // add info to database
+                        // go to next page
+                        Intent nextScreen = new Intent(v.getContext(),PageAfterQuiz.class);
+                        startActivity(nextScreen);
+
+                    }
+                }
 
         );
 

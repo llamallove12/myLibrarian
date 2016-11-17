@@ -78,7 +78,6 @@
         android:text="Title Name"
         android:ems="10"
         android:id="@+id/TitleTextbox"
-        style="?android:attr/keyboardViewStyle"
         android:background="@android:color/background_light"
         android:layout_marginTop="10dp"
         android:layout_alignTop="@+id/groupRadio"
