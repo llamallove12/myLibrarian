@@ -21,7 +21,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Registration"></activity>
         <activity android:name=".quiz"></activity>
-
+        <activity android:name=".SecondQuizPage"></activity>
+        <activity android:name=".PageAfterQuiz"></activity>
+        <activity android:name=".history"></activity>
     </application>
 
 </manifest>
