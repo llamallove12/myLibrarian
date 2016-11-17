@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         books.addBook(book3);
 
 
-        TextView t = (TextView) findViewById(R.id.textView2);
+        TextView t = (TextView) findViewById(R.id.textView7);
         t.setText(books.getBook(1).getTitle());
 
 
