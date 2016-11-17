@@ -52,18 +52,15 @@ public class login extends AppCompatActivity {
                     else {
                         Intent nextScreen = new Intent(v.getContext(), MainActivity.class);
                         startActivity(nextScreen);
-                        // TODO Add global variable
+                        // Example for global user
+                        AppVars mApp = ((AppVars)getApplicationContext());
+                        mApp.setUser(currentUser.getUserId());
+                        //int globalVarValue = mApp.getUser();
+                        //Toast.makeText(v.getContext(),""+globalVarValue,3).show();
                     }
                 }
 
                 else{
-                    // Example for global user
-                    AppVars mApp = ((AppVars)getApplicationContext());
-                    mApp.setUser(1);
-                    int globalVarValue = mApp.getUser();
-                    //Toast.makeText(v.getContext(),""+globalVarValue,3).show();
-
-
                     Toast.makeText(v.getContext(),"User Not Found",Toast.LENGTH_LONG).show();
                     editEmail.setText("");
                     editPassword.setText("");

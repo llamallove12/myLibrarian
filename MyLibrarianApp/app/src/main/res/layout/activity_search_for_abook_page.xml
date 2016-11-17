@@ -77,25 +77,28 @@
         android:inputType="textPersonName"
         android:text="Title Name"
         android:ems="10"
-        android:id="@+id/TitleTextbox"
         android:background="@android:color/background_light"
         android:layout_marginTop="10dp"
         android:layout_alignTop="@+id/groupRadio"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/TitleTextBox" />
+    <!-- style="?android:attr/keyboardViewStyle" -->
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Author Name"
-        android:ems="10"
-        android:id="@+id/editText8"
-        style="@android:style/Widget.KeyboardView"
-        android:background="@android:color/background_light"
-        android:layout_below="@+id/TitleTextbox"
-        android:layout_alignLeft="@+id/TitleTextbox"
-        android:layout_alignStart="@+id/TitleTextbox"
-        android:layout_marginTop="15dp" />
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:text="Author Name"
+    android:ems="10"
+    android:id="@+id/AuthorTextBox"
+    android:background="@android:color/background_light"
+    android:layout_below="@+id/TitleTextbox"
+    android:layout_alignLeft="@+id/TitleTextbox"
+    android:layout_alignStart="@+id/TitleTextbox"
+    android:layout_marginTop="15dp" />
+    <!-- style="@android:style/Widget.KeyboardView" -->
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -103,43 +106,52 @@
         android:inputType="textPersonName"
         android:text="ISBN"
         android:ems="10"
-        android:id="@+id/editText9"
-        style="@android:style/Widget.KeyboardView"
+        android:id="@+id/ISBNTextBox"
         android:background="@android:color/background_light"
         android:layout_marginBottom="10dp"
         android:layout_alignBottom="@+id/groupRadio"
-        android:layout_alignLeft="@+id/editText8"
-        android:layout_alignStart="@+id/editText8" />
+        android:layout_alignLeft="@+id/AuthorTextBox"
+        android:layout_alignStart="@+id/AuthorTextBox" />
+    <!-- style="@android:style/Widget.KeyboardView" -->
+
+
+<TextView
+    android:text="Here is what we found:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="31dp"
+    android:id="@+id/textView5"
+    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+    android:layout_below="@+id/groupRadio"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignRight="@+id/ISBNTextBox"
+    android:layout_alignEnd="@+id/ISBNTextBox"
+    android:textSize="24sp"
+    android:textColor="@android:color/black"
+    android:scrollbars="vertical"
+    android:scrollIndicators="right"
+    android:scrollbarTrackVertical="@android:color/black" />
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:verticalScrollbarPosition="right"
+    android:visibility="visible"
+    android:scrollbars="vertical"
+    android:scrollIndicators="right"
+    android:scrollbarTrackVertical="@android:color/black"
+    android:layout_below="@+id/textView5">
 
     <TextView
-        android:text="Here is what we found:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:id="@+id/textView5"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_below="@+id/groupRadio"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText9"
-        android:layout_alignEnd="@+id/editText9"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:scrollbars="vertical"
-        android:scrollIndicators="right"
-        android:scrollbarTrackVertical="@android:color/black" />
-
-    <LinearLayout
-        android:orientation="vertical"
+        android:text="TextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:verticalScrollbarPosition="right"
-        android:visibility="visible"
-        android:scrollbars="vertical"
-        android:scrollIndicators="right"
-        android:scrollbarTrackVertical="@android:color/black"
-        android:layout_below="@+id/textView5"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:id="@+id/ListOfBooks"
+        android:scrollbars="vertical" />
+</LinearLayout>
 
 </RelativeLayout>
