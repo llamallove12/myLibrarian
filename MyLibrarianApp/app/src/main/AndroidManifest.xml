@@ -20,6 +20,7 @@
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
         <activity android:name=".history"></activity>
+        <activity android:name=".SecondQuizPage"></activity>
     </application>
 
 </manifest>
