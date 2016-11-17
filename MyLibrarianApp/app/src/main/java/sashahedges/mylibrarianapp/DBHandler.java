@@ -91,11 +91,4 @@ public class DBHandler extends SQLiteOpenHelper {
         return bookList;
     }
 
-    public int getBookCount() {
-        String countQuery = "SELECT * FROM " + TABLE_BOOKS;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
-        return cursor.getCount();
-    }
 }

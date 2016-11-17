@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class Registration extends AppCompatActivity {
 
+    static int nextUp = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,8 @@ public class Registration extends AppCompatActivity {
                 if(pass.equals(pass2)){
 
                     //add user
-                    User user = new User(db.getUserCount() + 1,name,email,pass,"","");
+                    User user = new User(nextUp,name,email,pass,"","");
+                    nextUp++;
                     db.addUser(user);
 
                     //go to next screen
@@ -46,7 +49,8 @@ public class Registration extends AppCompatActivity {
 
                 }
                 else {
-                    Toast.makeText(v.getContext(),"Passwords do not match: please try again",3).show();
+                    //Toast.makeText(v.getContext(),"Passwords do not match: please try again",Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(), Integer.toString(nextUp), Toast.LENGTH_LONG).show();
                     editPassword.setText("");
                     editPasswordConfirm.setText("");
 
