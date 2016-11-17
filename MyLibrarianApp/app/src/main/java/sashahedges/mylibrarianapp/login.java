@@ -16,6 +16,10 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+
+
+
+
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
         final Button btnSignup = (Button) findViewById(R.id.btnSignup);
         final EditText editEmail = (EditText) findViewById(R.id.editEmail);
@@ -24,6 +28,7 @@ public class login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email = editEmail.getText().toString();
                 String password = editPassword.getText().toString();
                 if(password.equals("password") && email.equals("susan@gmail.com")){
@@ -33,7 +38,11 @@ public class login extends AppCompatActivity {
                 }
 
                 else{
-                    Toast.makeText(v.getContext(),"Login failed",3).show();
+                    AppVars mApp = ((AppVars)getApplicationContext());
+                    mApp.setUser(1);
+                    int globalVarValue = mApp.getUser();
+
+                    Toast.makeText(v.getContext(),""+globalVarValue,3).show();
                     editEmail.setText("");
                     editPassword.setText("");
                 }
