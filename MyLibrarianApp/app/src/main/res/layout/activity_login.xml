@@ -10,14 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sashahedges.mylibrarianapp.login">
 
-    <Button
-        android:text="Login"
+    <TextView
+        android:text="Login to MyLibrarian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="164dp" />
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editPassword"
+        android:hint="Password"
+        android:layout_below="@+id/editEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,20 +38,39 @@
         android:ems="10"
         android:id="@+id/editEmail"
         android:hint="Email"
-        android:layout_above="@+id/editPassword"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/editPassword"
-        android:layout_alignStart="@+id/editPassword"
-        android:layout_marginBottom="11dp" />
+        android:layout_alignStart="@+id/editPassword" />
 
-    <EditText
+    <Button
+        android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginBottom="44dp"
-        android:id="@+id/editPassword"
-        android:layout_above="@+id/btnLogin"
-        android:hint="Password"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/btnLogin"
+        android:layout_alignTop="@+id/editPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
+
+    <TextView
+        android:text="Don't have an account?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:text="Sign Up!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/btnLogin"
+        android:layout_alignEnd="@+id/btnLogin"
+        android:layout_marginTop="31dp"
+        android:id="@+id/btnSignup" />
 
 </RelativeLayout>

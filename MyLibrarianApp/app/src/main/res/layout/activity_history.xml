@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="sashahedges.mylibrarianapp.history">
+
+    <Button
+        android:text="Add New Book"
+        android:layout_width="600px"
+        android:layout_height="150px"
+        android:id="@+id/addBookButton"
+        android:textSize="18sp"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstBookTitle"
+        android:textSize="24sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:text="Book1"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstAuthorTitle"
+        android:textSize="24sp"
+        android:text="by Author1"
+        android:layout_below="@+id/firstBookTitle"
+        android:layout_alignLeft="@+id/firstBookTitle"
+        android:layout_alignStart="@+id/firstBookTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="History"
+        android:ems="10"
+        android:id="@+id/historyTitle"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/addBookButton"
+        android:layout_alignStart="@+id/addBookButton"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:layout_width="250px"
+        android:layout_height="300px"
+        app:srcCompat="@android:color/darker_gray"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/historyTitle"
+        android:layout_alignLeft="@+id/historyTitle"
+        android:layout_alignStart="@+id/historyTitle" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstRatingBar"
+        android:numStars="4"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:layout_below="@+id/firstAuthorTitle"
+        android:layout_alignRight="@+id/addBookButton"
+        android:layout_alignEnd="@+id/addBookButton"
+        android:layout_above="@+id/firstAuthorTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
+
+</RelativeLayout>
