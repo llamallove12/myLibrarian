@@ -20,8 +20,9 @@
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SecondQuizPage" />
-        <activity android:name=".PageAfterQuiz"></activity>
-        <activity android:name=".history"></activity>
+        <activity android:name=".PageAfterQuiz" />
+        <activity android:name=".history" />
+        <activity android:name=".SearchForABookPage"></activity>
     </application>
 
 </manifest>
