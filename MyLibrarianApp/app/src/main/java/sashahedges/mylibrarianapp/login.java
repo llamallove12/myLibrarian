@@ -47,7 +47,6 @@ public class login extends AppCompatActivity {
                     else {
                         Intent nextScreen = new Intent(v.getContext(), MainActivity.class);
                         startActivity(nextScreen);
-                        // TODO Add global variable
                     }
                 }
 
