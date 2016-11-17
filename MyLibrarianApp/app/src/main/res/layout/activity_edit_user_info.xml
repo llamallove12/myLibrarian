@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="Email"
+        android:hint="New Email"
         android:ems="10"
         android:id="@+id/editEmailBox"
         android:layout_marginLeft="23dp"
@@ -56,5 +56,51 @@
         android:layout_alignBottom="@+id/button3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordTextBox"
+        android:hint="New Password"
+        android:layout_below="@+id/changePassword"
+        android:layout_alignLeft="@+id/changePassword"
+        android:layout_alignStart="@+id/changePassword" />
+
+    <TextView
+        android:text="Change Password:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/changePassword"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_below="@+id/editEmailBox"
+        android:layout_alignLeft="@+id/editEmailBox"
+        android:layout_alignStart="@+id/editEmailBox" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameTextBox"
+        android:hint="New Name"
+        android:layout_below="@+id/changeUserName"
+        android:layout_alignLeft="@+id/changeUserName"
+        android:layout_alignStart="@+id/changeUserName" />
+
+    <TextView
+        android:text="Change Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeUserName"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/passwordTextBox"
+        android:layout_alignLeft="@+id/passwordTextBox"
+        android:layout_alignStart="@+id/passwordTextBox" />
 
 </RelativeLayout>
