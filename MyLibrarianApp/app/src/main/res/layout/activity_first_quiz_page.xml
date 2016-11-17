@@ -41,7 +41,8 @@
         android:layout_alignLeft="@+id/Fantasy"
         android:layout_alignStart="@+id/Fantasy"
         android:id="@+id/Romance"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
+
 
     <CheckBox
         android:text="Mystery"

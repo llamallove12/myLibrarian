@@ -9,15 +9,87 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sashahedges.mylibrarianapp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="main page"
-        android:layout_marginLeft="134dp"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="42dp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView7" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView6" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView5" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView10" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView9" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView8" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView14" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView13" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView12" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
 </RelativeLayout>

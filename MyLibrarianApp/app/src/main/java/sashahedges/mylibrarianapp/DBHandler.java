@@ -28,7 +28,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CONTACTS_TABLE = "CREATE TABLE" + TABLE_BOOKS + "(" +
+        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_BOOKS + "(" +
         KEY_ID + " INTEGER PRIMARY KEY, " + KEY_TITLE + " TEXT, " +
         KEY_GENRE + " TEXT, " + KEY_DESCRIPTION + " TEXT, " + KEY_AUTHOR + " TEXT, "
         + KEY_PAGECOUNT + " INTEGER" + ")";
