@@ -90,4 +90,12 @@ public class UserDB extends SQLiteOpenHelper {
         cursor.close();
         return usrList;
     }
+
+    public int getUserCount() {
+        String countQuery = "SELECT * FROM " + TABLE_USERS;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        cursor.close();
+        return cursor.getCount();
+    }
 }
