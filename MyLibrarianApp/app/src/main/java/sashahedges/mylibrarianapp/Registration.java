@@ -37,8 +37,12 @@ public class Registration extends AppCompatActivity {
                 if(pass.equals(pass2)){
 
                     //add user
-                    User user = new User(1,name,email,pass,"","");
+                    User user = new User(db.getUserCount() + 1,name,email,pass,"","");
                     db.addUser(user);
+
+                    //change global variable
+                    AppVars mApp = ((AppVars)getApplicationContext());
+                    mApp.setUser(user.getUserId());
 
                     //go to next screen
                     Intent nextScreen = new Intent(v.getContext(),quiz.class);
