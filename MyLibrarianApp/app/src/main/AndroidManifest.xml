@@ -23,6 +23,8 @@
         <activity android:name=".PageAfterQuiz" />
         <activity android:name=".history" />
         <activity android:name=".SearchForABookPage"></activity>
+        <activity android:name=".Registration"></activity>
+        <activity android:name=".quiz"></activity>
     </application>
 
 </manifest>
