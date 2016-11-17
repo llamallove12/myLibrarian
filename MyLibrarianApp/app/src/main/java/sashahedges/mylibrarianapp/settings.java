@@ -23,6 +23,10 @@ public class settings extends AppCompatActivity {
             startActivity(nextScreen);
         }
         });
+
+
+
+
     }
 
 

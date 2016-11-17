@@ -47,7 +47,6 @@
         android:text="Name of Book"
         android:ems="10"
         android:id="@+id/editText2"
-        style="@android:style/Widget.Material.KeyboardView"
         android:backgroundTint="@android:color/background_light"
         android:textSize="24sp"
         android:layout_marginBottom="25dp"
