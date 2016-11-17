@@ -18,6 +18,10 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+
+
+
+
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
         final Button btnSignup = (Button) findViewById(R.id.btnSignup);
         final EditText editEmail = (EditText) findViewById(R.id.editEmail);
@@ -26,6 +30,7 @@ public class login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email = editEmail.getText().toString();
                 String password = editPassword.getText().toString();
                 UserDB udb = new UserDB(getApplicationContext());
@@ -51,6 +56,13 @@ public class login extends AppCompatActivity {
                 }
 
                 else{
+                    // Example for global user
+                    AppVars mApp = ((AppVars)getApplicationContext());
+                    mApp.setUser(1);
+                    int globalVarValue = mApp.getUser();
+                    //Toast.makeText(v.getContext(),""+globalVarValue,3).show();
+
+
                     Toast.makeText(v.getContext(),"User Not Found",Toast.LENGTH_LONG).show();
                     editEmail.setText("");
                     editPassword.setText("");

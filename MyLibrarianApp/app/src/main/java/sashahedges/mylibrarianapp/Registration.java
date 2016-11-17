@@ -25,6 +25,8 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
                 String name = editName.getText().toString();
                 String email = editEmail.getText().toString();
                 String pass = editPassword.getText().toString();
@@ -33,7 +35,7 @@ public class Registration extends AppCompatActivity {
                 // add vals to db
                 UserDB db = new UserDB(getApplicationContext());
                 if(pass.equals(pass2)){
-                    
+
                     //add user
                     User user = new User(1,name,email,pass,"","");
                     db.addUser(user);
