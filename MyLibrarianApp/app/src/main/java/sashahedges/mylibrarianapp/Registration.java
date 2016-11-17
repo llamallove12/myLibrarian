@@ -43,6 +43,10 @@ public class Registration extends AppCompatActivity {
                     nextUp++;
                     db.addUser(user);
 
+                    //change global variable
+                    AppVars mApp = ((AppVars)getApplicationContext());
+                    mApp.setUser(user.getUserId());
+
                     //go to next screen
                     Intent nextScreen = new Intent(v.getContext(),quiz.class);
                     startActivity(nextScreen);
