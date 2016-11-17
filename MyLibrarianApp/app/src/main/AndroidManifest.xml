@@ -19,11 +19,13 @@
         <activity android:name=".settings" />
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Registration"></activity>
-        <activity android:name=".quiz"></activity>
-        <activity android:name=".SecondQuizPage"></activity>
-        <activity android:name=".PageAfterQuiz"></activity>
-        <activity android:name=".history"></activity>
+        <activity android:name=".Registration" />
+        <activity android:name=".quiz" />
+        <activity android:name=".SecondQuizPage" />
+        <activity android:name=".PageAfterQuiz" />
+        <activity android:name=".history" />
+        <activity android:name=".editUserInfo" />
+        <activity android:name=".addHistoryBook"></activity>
     </application>
 
 </manifest>

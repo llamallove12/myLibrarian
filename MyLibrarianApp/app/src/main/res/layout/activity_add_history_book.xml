@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_history_book"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="sashahedges.mylibrarianapp.addHistoryBook">
+
+    <Button
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:id="@+id/button6"
+        android:textSize="36sp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/btn_dialog" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_marginBottom="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <Button
+        android:text="Finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_alignBaseline="@+id/button5"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="Name of Book"
+        android:ems="10"
+        android:id="@+id/editText2"
+        style="@android:style/Widget.Material.KeyboardView"
+        android:backgroundTint="@android:color/background_light"
+        android:textSize="24sp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Add Book to History:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:id="@+id/addHistoryBookTitle"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
