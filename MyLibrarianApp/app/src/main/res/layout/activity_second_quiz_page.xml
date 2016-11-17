@@ -33,51 +33,49 @@
         android:textSize="18sp" />
 
     <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/PageTwoTitle"
-        android:layout_alignStart="@+id/PageTwoTitle"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginBottom="26dp"
-        android:id="@+id/BackButton" />
-
-    <Button
-        android:text="Add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:id="@+id/AddButton"
-        android:layout_below="@+id/Name of Book"
-        android:layout_alignLeft="@+id/Name of Book"
-        android:layout_alignStart="@+id/Name of Book"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp" />
-
-    <Button
         android:text="Finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/FinishButton"
-        android:layout_alignBaseline="@+id/AddButton"
-        android:layout_alignBottom="@+id/AddButton"
-        android:layout_alignRight="@+id/Name of Book"
-        android:layout_alignEnd="@+id/Name of Book"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:maxLines = "6"
+        android:scrollbars = "vertical"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameBook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:id="@+id/bookList"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:layout_width="700px" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="none"
-        android:text="Name of Book"
+        android:hint="Add a book"
         android:ems="10"
-        android:id="@+id/Name of Book"
-        style="@android:style/Widget.Material.KeyboardView"
+        android:id="@+id/nameBook"
+        style="@style/Widget.AppCompat.EditText"
         android:backgroundTint="@android:color/background_light"
         android:textSize="24sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/PageTwoTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddButton"
+        android:layout_alignTop="@+id/nameBook"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
 </RelativeLayout>
