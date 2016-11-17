@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondQuizPage extends AppCompatActivity {
 
@@ -27,8 +28,10 @@ public class SecondQuizPage extends AppCompatActivity {
         final TextView t = (TextView) findViewById(R.id.textView7);
 
 
-
-
+        AppVars mApp = ((AppVars)getApplicationContext());
+        int userID = mApp.getUser();
+        UserDB db = new UserDB(getApplicationContext());
+        final User user = db.getUser(userID);
 
         addButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -41,9 +44,7 @@ public class SecondQuizPage extends AppCompatActivity {
                         bookList.setText(bookListString+"\n"+book);
 
                         // add to database
-                        UserDB db = new UserDB(getApplicationContext());
-
-
+                        user.setUserBookList(user.getUserBookList()+" / " +book);
 
 
                         nameBook.setText("");
@@ -63,6 +64,8 @@ public class SecondQuizPage extends AppCompatActivity {
                     public void onClick(View v) {
                         // add info to database
                         // go to next page
+
+
                         Intent nextScreen = new Intent(v.getContext(),PageAfterQuiz.class);
                         startActivity(nextScreen);
 

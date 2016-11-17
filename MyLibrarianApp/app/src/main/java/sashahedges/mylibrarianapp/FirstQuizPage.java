@@ -36,28 +36,24 @@ public class FirstQuizPage extends AppCompatActivity {
                         if (ch1.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"1");
                         }
-                        else if (ch2.isChecked()){
+                        if (ch2.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"2");
                         }
-                        else if (ch3.isChecked()){
+                        if (ch3.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"3");
                         }
-                        else if (ch4.isChecked()){
+                        if (ch4.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"4");
-                            Toast.makeText(v.getContext(),user.getUserGenreList(),3).show();
                         }
-                        else if (ch5.isChecked()){
+                        if (ch5.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"5");
-                            Toast.makeText(v.getContext(),user.getUserGenreList(),3).show();
+
                         }
-
-
-
 
 
 
                         Intent nextScreen = new Intent(v.getContext(),SecondQuizPage.class);
-                        //startActivity(nextScreen);
+                        startActivity(nextScreen);
 
 
                     }
