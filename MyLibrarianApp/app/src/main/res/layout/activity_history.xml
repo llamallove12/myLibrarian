@@ -24,29 +24,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/firstBookTitle"
-        android:textSize="24sp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:text="Book1"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2"
-        tools:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/firstAuthorTitle"
-        android:textSize="24sp"
-        android:text="by Author1"
-        android:layout_below="@+id/firstBookTitle"
-        android:layout_alignLeft="@+id/firstBookTitle"
-        android:layout_alignStart="@+id/firstBookTitle" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="History"
         android:ems="10"
@@ -57,30 +34,16 @@
         android:layout_alignStart="@+id/addBookButton"
         android:textColor="@android:color/black" />
 
-    <ImageView
-        android:layout_width="250px"
-        android:layout_height="300px"
-        app:srcCompat="@android:color/darker_gray"
-        android:id="@+id/imageView2"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/historyTitle"
-        android:layout_alignLeft="@+id/historyTitle"
-        android:layout_alignStart="@+id/historyTitle" />
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/firstRatingBar"
-        android:numStars="4"
-        android:scaleX="0.7"
-        android:scaleY="0.7"
-        android:layout_below="@+id/firstAuthorTitle"
-        android:layout_alignRight="@+id/addBookButton"
-        android:layout_alignEnd="@+id/addBookButton"
-        android:layout_above="@+id/firstAuthorTitle"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="700px"
+        android:layout_above="@+id/addBookButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp" />
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/historyList"></LinearLayout>
 
 
 </RelativeLayout>
