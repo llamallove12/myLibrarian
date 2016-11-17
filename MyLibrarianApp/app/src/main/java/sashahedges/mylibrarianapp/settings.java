@@ -19,12 +19,45 @@ public class settings extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            Intent nextScreen = new Intent(v.getContext(),quiz.class);
+            Intent nextScreen = new Intent(v.getContext(),userProfile.class);
             startActivity(nextScreen);
         }
         });
 
 
+        final Button btnBookSearch = (Button) findViewById(R.id.goSearchButton);
+        btnBookSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // UNFINISHED, fix class
+                Intent nextScreen = new Intent(v.getContext(),quiz.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
+        final Button btnHistory = (Button) findViewById(R.id.goHistoryButton);
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent nextScreen = new Intent(v.getContext(),history.class);
+                startActivity(nextScreen);
+            }
+        });
+
+
+        final Button btnOverdrive = (Button) findViewById(R.id.goOverdriveButton);
+        btnOverdrive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // UNFINISHED, fix class
+                Intent nextScreen = new Intent(v.getContext(),quiz.class);
+                startActivity(nextScreen);
+            }
+        });
 
 
     }
