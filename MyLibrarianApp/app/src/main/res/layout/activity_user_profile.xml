@@ -43,14 +43,14 @@
         android:layout_height="150px"
         android:id="@+id/button2"
         android:textSize="18sp"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/btnSignup"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Recommendation Quiz"
         android:layout_width="600px"
         android:layout_height="150px"
-        android:id="@+id/button"
+        android:id="@+id/btnSignup"
         android:layout_marginBottom="13dp"
         android:textSize="18sp"
         android:layout_alignParentBottom="true"

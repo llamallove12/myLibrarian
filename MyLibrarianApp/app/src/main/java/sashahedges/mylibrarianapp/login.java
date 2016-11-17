@@ -17,6 +17,7 @@ public class login extends AppCompatActivity {
 
 
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        final Button btnSignup = (Button) findViewById(R.id.btnSignup);
         final EditText editEmail = (EditText) findViewById(R.id.editEmail);
         final EditText editPassword = (EditText) findViewById(R.id.editPassword);
 
@@ -38,5 +39,21 @@ public class login extends AppCompatActivity {
                 }
             }
         });
+
+        btnSignup.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    Intent nextScreen = new Intent(v.getContext(),MainActivity.class);
+                    startActivity(nextScreen);
+
+
+                    }
+                }
+
+        );
+
+
     }
 }
