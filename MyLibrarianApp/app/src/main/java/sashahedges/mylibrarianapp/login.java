@@ -20,7 +20,7 @@ public class login extends AppCompatActivity {
 
 
 
-
+        final Button tempButton = (Button) findViewById(R.id.tempButton); // this button is used to test out the user profile page
 
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
         final Button btnSignup = (Button) findViewById(R.id.btnSignup);
@@ -75,6 +75,20 @@ public class login extends AppCompatActivity {
 
                     Intent nextScreen = new Intent(v.getContext(),Registration.class);
                     startActivity(nextScreen);
+
+
+                    }
+                }
+
+        );
+
+        tempButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent nextScreen = new Intent(v.getContext(),userProfile.class);
+                        startActivity(nextScreen);
 
 
                     }

@@ -50,7 +50,6 @@ public class UserDB extends SQLiteOpenHelper {
         values.put(KEY_BOOKLIST, usr.getUserBookList());
         values.put(KEY_GENRELIST, usr.getUserGenreList());
         db.insert(TABLE_USERS, null, values);
-        db.close();
     }
 
     public User getUser(int id) {
@@ -91,11 +90,4 @@ public class UserDB extends SQLiteOpenHelper {
         return usrList;
     }
 
-    public int getUserCount() {
-        String countQuery = "SELECT * FROM " + TABLE_USERS;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
-        return cursor.getCount();
-    }
 }
