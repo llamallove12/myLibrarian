@@ -9,6 +9,17 @@ import android.app.Application;
 public class AppVars extends Application {
 
     private int user;
+    private int bookId=1;
+
+    public int getBookId(){
+        return bookId;
+    }
+
+    public void incrementBookId(){
+        bookId++;
+
+    }
+
     public int getUser(){
         return user;
 
