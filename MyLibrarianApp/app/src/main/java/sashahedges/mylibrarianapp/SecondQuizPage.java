@@ -22,6 +22,14 @@ public class SecondQuizPage extends AppCompatActivity {
         final EditText nameBook = (EditText) findViewById(R.id.nameBook);
 
 
+        //System.out.println(getting.getTitle());
+
+        final TextView t = (TextView) findViewById(R.id.textView7);
+
+
+
+
+
         addButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -31,6 +39,13 @@ public class SecondQuizPage extends AppCompatActivity {
                         String book = nameBook.getText().toString();
                         String bookListString = bookList.getText().toString();
                         bookList.setText(bookListString+"\n"+book);
+
+                        // add to database
+                        UserDB db = new UserDB(getApplicationContext());
+
+
+
+
                         nameBook.setText("");
                         InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         mgr.hideSoftInputFromWindow(nameBook.getWindowToken(),0);
