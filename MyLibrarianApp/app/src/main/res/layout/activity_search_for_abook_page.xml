@@ -11,7 +11,20 @@
     tools:context="sashahedges.mylibrarianapp.SearchForABookPage"
     tools:actionBarNavMode="?attr/windowActionBar"
     android:addStatesFromChildren="?android:attr/windowActionBar"
-    android:scrollbars="vertical" >
+    tools:visibility="visible"
+    android:verticalScrollbarPosition="right"
+    android:scrollbarSize="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical">
+
+    <TextView
+        android:text="Search For A Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SearchForABook"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <RadioGroup
             android:id="@+id/groupRadio"
@@ -56,15 +69,7 @@
 
         </LinearLayout>
 
-    <TextView
-        android:text="Search For A Book"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/SearchForABook"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -120,24 +125,22 @@
         android:layout_alignRight="@+id/editText9"
         android:layout_alignEnd="@+id/editText9"
         android:textSize="24sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:scrollbars="vertical"
+        android:scrollIndicators="right"
+        android:scrollbarTrackVertical="@android:color/black" />
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@+id/SearchForABook"
-        android:layout_toEndOf="@+id/SearchForABook"
-        android:layout_marginTop="110dp"
-        android:id="@+id/ScrollBar"
-        style="@style/TextAppearance.StatusBar.EventContent"
-        android:keepScreenOn="true"
-        android:layoutAnimation="@style/AppTheme">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:verticalScrollbarPosition="right"
+        android:visibility="visible"
+        android:scrollbars="vertical"
+        android:scrollIndicators="right"
+        android:scrollbarTrackVertical="@android:color/black"
+        android:layout_below="@+id/textView5"></LinearLayout>
 
 </RelativeLayout>
