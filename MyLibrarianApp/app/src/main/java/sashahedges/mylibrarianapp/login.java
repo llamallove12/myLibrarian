@@ -45,7 +45,7 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                    Intent nextScreen = new Intent(v.getContext(),MainActivity.class);
+                    Intent nextScreen = new Intent(v.getContext(),Registration.class);
                     startActivity(nextScreen);
 
 

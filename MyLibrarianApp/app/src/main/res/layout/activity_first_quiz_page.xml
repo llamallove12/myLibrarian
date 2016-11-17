@@ -18,7 +18,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:id="@+id/Sci-Fi"
+        android:id="@+id/SciFi"
         android:layout_width="wrap_content"
         android:textAppearance="@android:style/TextAppearance.Material"
         android:textSize="18sp" />
@@ -28,9 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Fantasy"
-        android:layout_below="@+id/Sci-Fi"
-        android:layout_alignLeft="@+id/Sci-Fi"
-        android:layout_alignStart="@+id/Sci-Fi"
+        android:layout_below="@+id/SciFi"
+        android:layout_alignLeft="@+id/SciFi"
+        android:layout_alignStart="@+id/SciFi"
         android:textSize="18sp" />
 
     <CheckBox
@@ -60,7 +60,7 @@
         android:layout_below="@+id/Mystery"
         android:layout_alignLeft="@+id/Mystery"
         android:layout_alignStart="@+id/Mystery"
-        android:id="@+id/Non-Fiction"
+        android:id="@+id/NonFiction"
         android:textSize="18sp" />
 
     <TextView
@@ -70,7 +70,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/1/2"
+        android:id="@+id/half"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:fontFamily="sans-serif"
         android:textSize="18sp" />
@@ -79,10 +79,10 @@
         android:text="Select Your Favorite Genres!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Select Your Favorite Genres!"
+        android:id="@+id/genre"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textSize="24sp"
-        android:layout_below="@+id/1/2"
+        android:layout_below="@+id/half"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp" />
 
@@ -90,9 +90,9 @@
         android:text="Next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Non-Fiction"
-        android:layout_toLeftOf="@+id/1/2"
-        android:layout_toStartOf="@+id/1/2"
+        android:layout_below="@+id/NonFiction"
+        android:layout_toLeftOf="@+id/half"
+        android:layout_toStartOf="@+id/half"
         android:id="@+id/NextPageButton"
         android:textSize="18sp" />
 

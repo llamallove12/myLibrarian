@@ -15,10 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstQuizPage"></activity>
+        <activity android:name=".FirstQuizPage" />
         <activity android:name=".settings" />
-        <activity android:name=".userProfile"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".userProfile" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Registration"></activity>
+        <activity android:name=".quiz"></activity>
+
     </application>
 
 </manifest>
