@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class FirstQuizPage extends AppCompatActivity {
 
@@ -32,25 +33,31 @@ public class FirstQuizPage extends AppCompatActivity {
                         User user = db.getUser(userID);
 
 
-                        if (ch1.isPressed()){
+                        if (ch1.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"1");
                         }
-                        else if (ch2.isPressed()){
+                        else if (ch2.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"2");
                         }
-                        else if (ch3.isPressed()){
+                        else if (ch3.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"3");
                         }
-                        else if (ch4.isPressed()){
+                        else if (ch4.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"4");
+                            Toast.makeText(v.getContext(),user.getUserGenreList(),3).show();
                         }
-                        else if (ch5.isPressed()){
+                        else if (ch5.isChecked()){
                             user.setUserGenreList(user.getUserGenreList()+" "+"5");
+                            Toast.makeText(v.getContext(),user.getUserGenreList(),3).show();
                         }
+
+
+
+
 
 
                         Intent nextScreen = new Intent(v.getContext(),SecondQuizPage.class);
-                        startActivity(nextScreen);
+                        //startActivity(nextScreen);
 
 
                     }
