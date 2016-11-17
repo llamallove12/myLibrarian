@@ -24,7 +24,6 @@ public class Registration extends AppCompatActivity {
                 Intent nextScreen = new Intent(v.getContext(),quiz.class);
                 startActivity(nextScreen);
 
-
             }
         });
 
