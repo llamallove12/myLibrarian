@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
 import android.content.ContentValues;
 import java.util.*;
-import java.io.*;
 /**
  * Created by brandonvowell on 11/16/16.
  */
@@ -32,7 +31,7 @@ public class DBHandler extends SQLiteOpenHelper {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE" + TABLE_BOOKS + "(" +
         KEY_ID + " INTEGER PRIMARY KEY, " + KEY_TITLE + " TEXT, " +
         KEY_GENRE + " TEXT, " + KEY_DESCRIPTION + " TEXT, " + KEY_AUTHOR + " TEXT, "
-        + KEY_PAGECOUNT + " TEXT" + ")";
+        + KEY_PAGECOUNT + " INTEGER" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
 
