@@ -11,7 +11,7 @@ import java.util.*;
  */
 
 public class DBHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "allTheBooks";
     private static final String TABLE_BOOKS = "Books";
 

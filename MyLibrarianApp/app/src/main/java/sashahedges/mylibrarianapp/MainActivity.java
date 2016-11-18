@@ -28,13 +28,14 @@ public class MainActivity extends AppCompatActivity {
         mApp.incrementBookId();
 
 
-//        books.addBook(book1);
-//        books.addBook(book2);
-//        books.addBook(book3);
+        books.addBook(book1);
+        books.addBook(book2);
+        books.addBook(book3);
 
 
-//        TextView t = (TextView) findViewById(R.id.textView2);
-//        t.setText(books.getBook(1).getTitle());
+
+        TextView t = (TextView) findViewById(R.id.textView7);
+        t.setText(books.getBook("Dracula").getTitle());
 
 
     }
