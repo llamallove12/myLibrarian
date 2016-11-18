@@ -22,6 +22,7 @@ public class userProfile extends AppCompatActivity {
 
         final Button nowNow = (Button) findViewById(R.id.notNow); // recommendation button
         final Button btnSignup = (Button) findViewById(R.id.btnSignup); // change user profile button
+        final TextView nameDisplay = (TextView) findViewById(R.id.name); // displays the default user email
         final TextView emailDisplay = (TextView) findViewById(R.id.textView3); // displays the default user email
 
         AppVars mApp = ((AppVars)getApplicationContext());
@@ -36,6 +37,7 @@ public class userProfile extends AppCompatActivity {
             }
         }
 
+        nameDisplay.setText(currentUser.getUserName());
         emailDisplay.setText(currentUser.getUserEmail()); // displays the user's actual email
 
         nowNow.setOnClickListener(

@@ -12,37 +12,6 @@
     tools:context="sashahedges.mylibrarianapp.userProfile">
 
 
-
-    <Button
-        android:text="Change User Info"
-        android:layout_width="600px"
-        android:layout_height="150px"
-        android:id="@+id/notNow"
-        android:textSize="18sp"
-        android:layout_above="@+id/btnSignup"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Recommendation Quiz"
-        android:layout_width="600px"
-        android:layout_height="150px"
-        android:id="@+id/btnSignup"
-        android:layout_marginBottom="13dp"
-        android:textSize="18sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/notNow"
-        android:layout_alignStart="@+id/notNow"
-    />
-
-    <ImageView
-        android:layout_width="330px"
-        android:layout_height="330px"
-        app:srcCompat="@mipmap/default_avatar"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/UserProfileTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,27 +25,83 @@
         android:layout_alignRight="@+id/notNow"
         android:layout_alignEnd="@+id/notNow" />
 
-    <TextView
-        android:text="Susan@gmail.com"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
+    <Button
+        android:text="Change User Info"
+        android:layout_width="650px"
+        android:layout_height="150px"
+        android:id="@+id/notNow"
+        android:textSize="18sp"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="14dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:text="Email:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="24sp"
+        android:textSize="18sp"
         tools:textStyle="bold"
+        android:layout_marginTop="43dp"
         android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp" />
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:text="Recommendation Quiz"
+        android:layout_width="650px"
+        android:layout_height="150px"
+        android:id="@+id/btnSignup"
+        android:textSize="18sp"
+        android:layout_below="@+id/notNow"
+        android:layout_alignLeft="@+id/notNow"
+        android:layout_alignStart="@+id/notNow"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:text="Susan@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/nameTextView"
+        android:layout_alignBottom="@+id/nameTextView"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <ImageView
+        android:layout_width="330px"
+        android:layout_height="330px"
+        app:srcCompat="@mipmap/default_avatar"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/UserProfileTitle"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
