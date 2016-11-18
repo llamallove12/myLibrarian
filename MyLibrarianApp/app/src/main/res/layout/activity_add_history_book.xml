@@ -58,7 +58,7 @@
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
+        android:id="@+id/ratingBarHistory"
         android:layout_below="@+id/textView17"
         android:layout_alignRight="@+id/addHistoryBookTitle"
         android:layout_alignEnd="@+id/addHistoryBookTitle"
