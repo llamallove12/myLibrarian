@@ -66,21 +66,10 @@
         tools:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_above="@+id/changeUserInfoButton"
-        android:layout_toLeftOf="@+id/recommendationQuizButton"
-        android:layout_toStartOf="@+id/recommendationQuizButton"
-        android:layout_marginBottom="28dp" />
-
-    <TextView
-        android:text="Susan@gmail.com"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignLeft="@+id/changeUserInfoButton"
-        android:layout_alignStart="@+id/changeUserInfoButton" />
+        android:layout_marginBottom="28dp"
+        android:layout_toLeftOf="@+id/changeUserInfoButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Name:"
@@ -92,7 +81,9 @@
         android:layout_above="@+id/textView3"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="11dp" />
+        android:layout_marginBottom="11dp"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
     <ImageView
         android:layout_width="360px"
@@ -102,4 +93,15 @@
         android:layout_below="@+id/UserProfileTitle"
         android:layout_alignRight="@+id/UserProfileTitle"
         android:layout_alignEnd="@+id/UserProfileTitle" />
+
+    <TextView
+        android:text="Susan@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

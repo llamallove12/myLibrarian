@@ -12,6 +12,8 @@ import java.util.Objects;
 
 public class editUserInfo extends AppCompatActivity {
 
+    public User currentUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,35 +25,30 @@ public class editUserInfo extends AppCompatActivity {
         final EditText editPassword = (EditText) findViewById(R.id.passwordTextBox);
         final EditText editName = (EditText) findViewById(R.id.nameTextBox);
 
+        final AppVars mApp = ((AppVars)getApplicationContext());
+        // int userID = mApp.getUser();
 
-
-
-        AppVars mApp = ((AppVars)getApplicationContext());
-        int userID = mApp.getUser();
-
-        UserDB udb = new UserDB(getApplicationContext());
-        List<User> allUsers = udb.getAllUsers();
-        User currentUser = null;
-        for(User u : allUsers) {
-            if (Objects.equals(u.getUserId(), userID)) {
-                currentUser = u;     // gets the current user object
-            }
-        }
-
-// make current user a global variable
-
+        // UserDB udb = new UserDB(getApplicationContext());
+        // currentUser = udb.getUser(userID);
 
         saveAndCloseButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        DBHandler db = new DBHandler(getApplicationContext());
+                        UserDB users = new UserDB(getApplicationContext());
+                        User user = users.getUser(mApp.getUser());
+
                         String newEmail = editEmail.getText().toString();       // user input email
                         String newPassword = editPassword.getText().toString(); // user input password
                         String newName = editName.getText().toString();         // user input name
 
-                        currentUser.setUserEmail(newEmail);            // updates the email
-                        currentUser.setUserPassword(newPassword);      // updates the password
-                        currentUser.setUserName(newName);              // updates the name
+                        user.setUserName(newName);
+                        users.updateUser(currentUser, "Name");
+
+                        // user.setUserEmail(newEmail);            // updates the email
+                        // user.setUserPassword(newPassword);      // updates the password
+                        // user.setUserName(newName);              // updates the name
 
                         Intent nextScreen = new Intent(v.getContext(),userProfile.class);
                         startActivity(nextScreen);
