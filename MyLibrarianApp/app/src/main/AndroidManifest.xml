@@ -31,8 +31,10 @@
         <activity android:name=".quiz" />
         <activity android:name=".editUserInfo" />
         <activity android:name=".addHistoryBook" />
-        <activity android:name=".BookPage"
-            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".BookPage"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Overdrive"></activity>
     </application>
 
 </manifest>

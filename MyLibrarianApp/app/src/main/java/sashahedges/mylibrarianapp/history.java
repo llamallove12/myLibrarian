@@ -27,7 +27,7 @@ public class history extends AppCompatActivity {
 
 
         // get user from user db
-        AppVars mApp = ((AppVars)getApplicationContext());
+        final AppVars mApp = ((AppVars)getApplicationContext());
         UserDB users = new UserDB(getApplicationContext());
         User user = users.getUser(mApp.getUser());
 
@@ -36,16 +36,26 @@ public class history extends AppCompatActivity {
 
 
         if(!users.getUser(mApp.getUser()).getUserBookList().equals("")){
-            Toast.makeText(this,users.getUser(mApp.getUser()).getUserBookList()+"  "+user.getUserName(),Toast.LENGTH_LONG).show();
             String[] books = user.getUserBookList().split(" / ");
-            Toast.makeText(this,""+books.length,Toast.LENGTH_LONG).show();
+
 
             for (int i=1;i<books.length;i++){
-                Book bk = db.getBook(books[i]);
+                final Book bk = db.getBook(books[i]);
                 TextView t = new TextView(this);
                 t.setText(books[i]);
                 t.setTextSize(20);
                 t.setPadding(0,50,0,0);
+                t.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mApp.setBookName(bk.getTitle());
+                                Intent nextScreen = new Intent(v.getContext(),BookPage.class);
+                                startActivity(nextScreen);
+                            }
+                        }
+
+                );
                 myLayout.addView(t);
 
                 RelativeLayout rLayout = new RelativeLayout(this);
@@ -58,10 +68,6 @@ public class history extends AppCompatActivity {
                 rLayout.addView(r);
                 myLayout.addView(rLayout);
             }
-
-        }
-        else{
-            Toast.makeText(this,"here: "+user.getUserBookList()+"  "+user.getUserName(),Toast.LENGTH_LONG).show();
 
         }
 
