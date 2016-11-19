@@ -1,12 +1,9 @@
 package sashahedges.mylibrarianapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,8 +17,8 @@ public class userProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        final Button nowNow = (Button) findViewById(R.id.notNow); // recommendation button
-        final Button btnSignup = (Button) findViewById(R.id.btnSignup); // change user profile button
+        final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton); // recommendation button
+        final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton); // change user profile button
         final TextView nameDisplay = (TextView) findViewById(R.id.name); // displays the default user email
         final TextView emailDisplay = (TextView) findViewById(R.id.textView3); // displays the default user email
 
@@ -40,7 +37,7 @@ public class userProfile extends AppCompatActivity {
         nameDisplay.setText(currentUser.getUserName());
         emailDisplay.setText(currentUser.getUserEmail()); // displays the user's actual email
 
-        nowNow.setOnClickListener(
+        quizButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -50,7 +47,7 @@ public class userProfile extends AppCompatActivity {
                 }
         );
 
-        btnSignup.setOnClickListener(
+        editProfileButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

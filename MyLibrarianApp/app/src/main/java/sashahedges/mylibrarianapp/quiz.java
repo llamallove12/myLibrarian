@@ -14,7 +14,7 @@ public class quiz extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         final Button doIt = (Button) findViewById(R.id.doIt);
-        final Button notNow = (Button) findViewById(R.id.notNow);
+        final Button notNow = (Button) findViewById(R.id.changeUserInfoButton);
         doIt.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

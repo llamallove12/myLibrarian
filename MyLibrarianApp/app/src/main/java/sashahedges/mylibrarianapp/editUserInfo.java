@@ -23,9 +23,7 @@ public class editUserInfo extends AppCompatActivity {
         final EditText editPassword = (EditText) findViewById(R.id.passwordTextBox);
         final EditText editName = (EditText) findViewById(R.id.nameTextBox);
 
-        String newEmail = editEmail.getText().toString();       // user input email
-        String newPassword = editPassword.getText().toString(); // user input password
-        String newName = editName.getText().toString();         // user input name
+
 
 
         AppVars mApp = ((AppVars)getApplicationContext());
@@ -40,15 +38,21 @@ public class editUserInfo extends AppCompatActivity {
             }
         }
 
-        currentUser.setUserEmail(newEmail);            // updates the email
-        currentUser.setUserPassword(newPassword);      // updates the password
-        currentUser.setUserName(newName);               // updates the name
+// make current user a global variable
 
 
         saveAndCloseButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String newEmail = editEmail.getText().toString();       // user input email
+                        String newPassword = editPassword.getText().toString(); // user input password
+                        String newName = editName.getText().toString();         // user input name
+
+                        currentUser.setUserEmail(newEmail);            // updates the email
+                        currentUser.setUserPassword(newPassword);      // updates the password
+                        currentUser.setUserName(newName);              // updates the name
+
                         Intent nextScreen = new Intent(v.getContext(),userProfile.class);
                         startActivity(nextScreen);
                     }

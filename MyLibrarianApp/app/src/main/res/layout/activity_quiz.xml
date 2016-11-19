@@ -31,7 +31,7 @@
         android:background="@android:color/darker_gray"
         android:textColor="@android:color/black"
         tools:textSize="20sp"
-        android:id="@+id/notNow"
+        android:id="@+id/changeUserInfoButton"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/doIt"
         android:layout_alignEnd="@+id/doIt"
@@ -45,7 +45,7 @@
         android:textSize="20sp"
         android:layout_height="100px"
         android:layout_width="400px"
-        android:layout_above="@+id/notNow"
+        android:layout_above="@+id/changeUserInfoButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp" />
 </RelativeLayout>
