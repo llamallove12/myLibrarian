@@ -46,6 +46,12 @@ public class editUserInfo extends AppCompatActivity {
                         user.setUserName(newName);
                         users.updateUser(currentUser, "Name");
 
+                        user.setUserName(newEmail);
+                        users.updateUser(currentUser, "Email");
+
+                        user.setUserName(newPassword);
+                        users.updateUser(currentUser, "Password");
+
                         // user.setUserEmail(newEmail);            // updates the email
                         // user.setUserPassword(newPassword);      // updates the password
                         // user.setUserName(newName);              // updates the name
