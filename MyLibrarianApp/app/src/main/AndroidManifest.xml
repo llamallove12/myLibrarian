@@ -21,7 +21,9 @@
         <activity android:name=".settings" />
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SecondQuizPage" />
+        <activity android:name=".SecondQuizPage"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity android:name=".PageAfterQuiz" />
         <activity android:name=".history" />
         <activity android:name=".SearchForABookPage"></activity>

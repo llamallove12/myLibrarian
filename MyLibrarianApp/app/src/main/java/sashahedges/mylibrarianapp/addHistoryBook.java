@@ -54,6 +54,7 @@ public class addHistoryBook extends AppCompatActivity {
                         float[] i = new float[] {mBar.getRating()};
 
                         book.setRating(Math.round(i[0]));
+                        db.updateBook(book,"Rating");
 
                         // add book to user list
 

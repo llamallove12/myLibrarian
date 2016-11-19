@@ -27,15 +27,19 @@ public class MainActivity extends AppCompatActivity {
         Book book3 = new Book(mApp.getBookId(),"Hitchhiker's Guide to the Galaxy","SciFi", "space shenanigans","Douglas Adams",250,5);
         mApp.incrementBookId();
 
+        Book book4 = new Book(mApp.getBookId(),"Life of Pi","SciFi","A boy and his tiger","Yann Martel",400,4);
+        mApp.incrementBookId();
 
         books.addBook(book1);
         books.addBook(book2);
         books.addBook(book3);
+        books.addBook(book4);
+
 
 
 
         TextView t = (TextView) findViewById(R.id.textView7);
-        t.setText(books.getBook("Dracula").getTitle());
+        t.setText(books.getBook("Life of Pi").getTitle());
 
 
     }

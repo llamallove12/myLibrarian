@@ -55,6 +55,17 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void updateBook(Book bk, String col){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        if (col.equals("Rating")){
+            values.put(KEY_RATING, bk.getRating());
+            db.update(TABLE_BOOKS, values, "id="+bk.getId(), null);
+
+        }
+
+    }
+
     public Book getBook(String title) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_BOOKS, new String[] { KEY_ID,

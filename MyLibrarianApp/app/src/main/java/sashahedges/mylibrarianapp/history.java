@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,13 +32,31 @@ public class history extends AppCompatActivity {
         User user = users.getUser(mApp.getUser());
 
 
+
+
+
         if(!users.getUser(mApp.getUser()).getUserBookList().equals("")){
             Toast.makeText(this,users.getUser(mApp.getUser()).getUserBookList()+"  "+user.getUserName(),Toast.LENGTH_LONG).show();
             String[] books = user.getUserBookList().split(" / ");
-            for (String s : books){
+            Toast.makeText(this,""+books.length,Toast.LENGTH_LONG).show();
+
+            for (int i=1;i<books.length;i++){
+                Book bk = db.getBook(books[i]);
                 TextView t = new TextView(this);
-                t.setText(s);
+                t.setText(books[i]);
+                t.setTextSize(20);
+                t.setPadding(0,50,0,0);
                 myLayout.addView(t);
+
+                RelativeLayout rLayout = new RelativeLayout(this);
+
+
+                RatingBar r = new RatingBar(this,null,R.attr.ratingBarStyleSmall);
+                //r.setNumStars(5);
+                r.setRating(bk.getRating());
+                //r.setRating(Float.parseFloat("5.0"));
+                rLayout.addView(r);
+                myLayout.addView(rLayout);
             }
 
         }
