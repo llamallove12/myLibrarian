@@ -10,6 +10,16 @@ public class AppVars extends Application {
 
     private int user = 1;
     private int bookId=1;
+    private String bookName="";
+
+    public String getBookName(){
+        return bookName;
+    }
+
+    public void setBookName(String name){
+        bookName=name;
+
+    }
 
     public int getBookId(){
         return bookId;

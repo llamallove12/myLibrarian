@@ -3,13 +3,13 @@
     package="sashahedges.mylibrarianapp">
 
     <application
+        android:name=".AppVars"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".AppVars"
         android:supportsRtl="true"
-        android:windowSoftInputMode = "adjustPan"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan">
         <activity android:name=".login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,16 +21,18 @@
         <activity android:name=".settings" />
         <activity android:name=".userProfile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SecondQuizPage"
-            android:windowSoftInputMode="adjustPan"
-            />
+        <activity
+            android:name=".SecondQuizPage"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".PageAfterQuiz" />
         <activity android:name=".history" />
-        <activity android:name=".SearchForABookPage"></activity>
-        <activity android:name=".Registration"></activity>
-        <activity android:name=".quiz"></activity>
+        <activity android:name=".SearchForABookPage" />
+        <activity android:name=".Registration" />
+        <activity android:name=".quiz" />
         <activity android:name=".editUserInfo" />
-        <activity android:name=".addHistoryBook"></activity>
+        <activity android:name=".addHistoryBook" />
+        <activity android:name=".BookPage"
+            android:windowSoftInputMode="adjustPan"></activity>
     </application>
 
 </manifest>
