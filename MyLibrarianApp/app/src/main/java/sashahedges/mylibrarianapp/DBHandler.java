@@ -87,6 +87,13 @@ public class DBHandler extends SQLiteOpenHelper {
         return contact;
     }
 
+    public boolean deleteTitle(int id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.delete(TABLE_BOOKS, KEY_ID + "=" + id, null) > 0;
+    }
+
+
     public Book getBookByAuthor(String title) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_BOOKS, new String[] { KEY_ID,

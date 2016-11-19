@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         final AppVars mApp = ((AppVars)getApplicationContext());
 
         //------------- adding books --------------------
-//        DBHandler books = new DBHandler(getApplicationContext());
+        DBHandler books = new DBHandler(getApplicationContext());
 //        Book book1 = new Book(mApp.getBookId(),"Harry Potter","Fantasy", "Wizard shenanigans","J.K. Rowling",200,5);
 //        mApp.incrementBookId();
 //
@@ -36,11 +36,33 @@ public class MainActivity extends AppCompatActivity {
 //        Book book4 = new Book(mApp.getBookId(),"Life of Pi","SciFi","A boy and his tiger","Yann Martel",400,4);
 //        mApp.incrementBookId();
 //
+//        Book book5 = new Book(mApp.getBookId(),"The Martian","SciFi","Mars shenanigans","Andy Weir",300,5);
+//        mApp.incrementBookId();
+//
 //        books.addBook(book1);
 //        books.addBook(book2);
 //        books.addBook(book3);
 //        books.addBook(book4);
+//        books.addBook(book5);
 
+
+//        UserDB users = new UserDB(getApplicationContext());
+//        List<User> userL = users.getAllUsers();
+//        for (User u : userL){
+//            u.setUserBookList("");
+//            users.updateUser(u,"BookList");
+//        }
+
+
+
+        List<Book> booksL = books.getAllBooks();
+        for (Book bk : booksL){
+            if (bk.getId()>5){
+                books.deleteTitle(bk.getId());
+
+            }
+
+        }
 
 
         //---------------------

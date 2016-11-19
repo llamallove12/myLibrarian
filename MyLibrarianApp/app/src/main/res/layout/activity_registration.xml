@@ -29,14 +29,14 @@
         android:layout_alignLeft="@+id/editPassReg"
         android:layout_alignStart="@+id/editPassReg"
         android:layout_marginTop="23dp"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:id="@+id/editPassConfirmReg" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Confirm Password"
+        android:hint="Password"
         android:ems="10"
         android:layout_marginTop="27dp"
         android:id="@+id/editPassReg"
