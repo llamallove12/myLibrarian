@@ -71,9 +71,37 @@ public class DBHandler extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_BOOKS, new String[] { KEY_ID,
                 KEY_TITLE, KEY_GENRE, KEY_DESCRIPTION, KEY_AUTHOR, KEY_PAGECOUNT, KEY_RATING }, KEY_TITLE + "=?",
                 new String[] { title }, null, null, null, null);
+
+        if (cursor.getCount() ==0){
+            return null;
+        }
+
+        else if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        //else{return null;}
+        Book contact = new Book(Integer.parseInt(cursor.getString(0)),
+                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
+                Integer.parseInt(cursor.getString(5)), Integer.parseInt(cursor.getString(6)));
+        cursor.close();
+        return contact;
+    }
+
+    public Book getBookByAuthor(String title) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_BOOKS, new String[] { KEY_ID,
+                        KEY_TITLE, KEY_GENRE, KEY_DESCRIPTION, KEY_AUTHOR, KEY_PAGECOUNT, KEY_RATING }, KEY_AUTHOR + "=?",
+                new String[] { title }, null, null, null, null);
+
+        if (cursor.getCount() ==0){
+            return null;
+        }
+
         if (cursor != null) {
             cursor.moveToFirst();
         }
+
+
         Book contact = new Book(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
                 Integer.parseInt(cursor.getString(5)), Integer.parseInt(cursor.getString(6)));
