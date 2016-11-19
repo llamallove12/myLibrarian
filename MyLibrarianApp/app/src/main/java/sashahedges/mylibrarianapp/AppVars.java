@@ -8,7 +8,7 @@ import android.app.Application;
 
 public class AppVars extends Application {
 
-    private int user;
+    private int user = 1;
     private int bookId=1;
 
     public int getBookId(){

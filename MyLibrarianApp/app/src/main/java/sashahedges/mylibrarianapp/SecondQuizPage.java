@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,28 +26,62 @@ public class SecondQuizPage extends AppCompatActivity {
         final EditText nameBook = (EditText) findViewById(R.id.nameBook);
 
 
-        //System.out.println(getting.getTitle());
-
-        final TextView t = (TextView) findViewById(R.id.textView7);
 
 
         AppVars mApp = ((AppVars)getApplicationContext());
-        int userID = mApp.getUser();
-        UserDB db = new UserDB(getApplicationContext());
-        final User user = db.getUser(userID);
+        final int userID = mApp.getUser();
+
+
+
+
+
+
 
         addButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        TextView bookList = (TextView) findViewById(R.id.bookList);
-                        bookList.setMovementMethod(new ScrollingMovementMethod());
-                        String book = nameBook.getText().toString();
-                        String bookListString = bookList.getText().toString();
-                        bookList.setText(bookListString+"\n"+book);
+                        LinearLayout l = (LinearLayout) findViewById(R.id.bookLayout);
 
-                        // add to database
+
+                        // figure scrolling out
+                        //r.setMovementMethod(new ScrollingMovementMethod());
+
+                        LinearLayout r = new LinearLayout(v.getContext());
+                        r.setOrientation(LinearLayout.HORIZONTAL);
+
+
+
+                        String book = nameBook.getText().toString();
+                        TextView t = new TextView(v.getContext());
+                        t.setText(book);
+                        r.addView(t);
+
+
+
+                        // RATING BAR
+                        RatingBar rating = (RatingBar) findViewById(R.id.ratingBar);
+                        float[] i = new float[] {rating.getRating()};
+
+                        RatingBar rate = new RatingBar(v.getContext(), null, android.R.attr.ratingBarStyleSmall);
+                        rate.setRating(i[0]);
+                        r.addView(rate);
+                        l.addView(r);
+
+
+                        // add rating to book db
+                        DBHandler books = new DBHandler(getApplicationContext());
+                        Book bk = books.getBook(book);
+                        bk.setRating(Math.round(i[0]));
+                        books.updateBook(bk,"Rating");
+
+                        // add book to user database
+                        UserDB db = new UserDB(getApplicationContext());
+                        User user = db.getUser(userID);
                         user.setUserBookList(user.getUserBookList()+" / " +book);
+                        db.updateUser(user,"BookList");
+
+
 
 
                         nameBook.setText("");

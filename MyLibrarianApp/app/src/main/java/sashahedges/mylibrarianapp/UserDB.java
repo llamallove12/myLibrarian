@@ -52,6 +52,37 @@ public class UserDB extends SQLiteOpenHelper {
         db.insert(TABLE_USERS, null, values);
     }
 
+    public void updateUser(User usr, String col){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        if (col.equals("Name")){
+            values.put(KEY_NAME, usr.getUserName());
+            db.update(TABLE_USERS, values, "id="+usr.getUserId(), null);
+
+        }
+        else if (col.equals("BookList")){
+            values.put(KEY_BOOKLIST, usr.getUserBookList());
+            db.update(TABLE_USERS, values, "id="+usr.getUserId(), null);
+
+        }
+        else if (col.equals("Email")){
+            values.put(KEY_EMAIL, usr.getUserEmail());
+            db.update(TABLE_USERS, values, "id="+usr.getUserId(), null);
+
+        }
+        else if (col.equals("Password")){
+            values.put(KEY_PASSWORD, usr.getUserPassword());
+            db.update(TABLE_USERS, values, "id="+usr.getUserId(), null);
+
+        }
+        else if (col.equals("GenreList")){
+            values.put(KEY_GENRELIST, usr.getUserGenreList());
+            db.update(TABLE_USERS, values, "id="+usr.getUserId(), null);
+
+        }
+
+    }
+
     public User getUser(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS, new String[] {KEY_ID,
