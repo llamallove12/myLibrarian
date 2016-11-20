@@ -29,7 +29,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginRight="44dp"
             android:layout_marginEnd="44dp"
-            android:layout_marginTop="34dp" />
+            android:layout_marginTop="19dp"
+            android:textColor="@android:color/black" />
 
         <LinearLayout
             android:orientation="vertical"

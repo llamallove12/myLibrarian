@@ -73,13 +73,14 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Get This Book!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/getBookButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="get this book"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -89,5 +90,6 @@
         android:layout_height="250px"
         android:layout_below="@+id/getBookButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 </RelativeLayout>

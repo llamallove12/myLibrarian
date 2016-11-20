@@ -18,7 +18,8 @@
         android:textSize="30sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -50,7 +51,8 @@
         android:id="@+id/btnLogin"
         android:layout_alignTop="@+id/editPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp" />
+        android:layout_marginTop="64dp"
+        android:textSize="20sp" />
 
     <TextView
         android:text="Don't have an account?"
@@ -62,16 +64,6 @@
         android:layout_below="@+id/btnLogin"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
-
-    <Button
-        android:text="Sign Up!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignRight="@+id/btnLogin"
-        android:layout_alignEnd="@+id/btnLogin"
-        android:layout_marginTop="31dp"
-        android:id="@+id/recommendationQuizButton" />
 
     <Button
         android:text="Button"
@@ -99,5 +91,15 @@
         android:layout_toRightOf="@+id/tempButton"
         android:layout_toEndOf="@+id/tempButton"
         android:id="@+id/toSearchButt" />
+
+    <Button
+        android:text="Sign Up!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/recommendationQuizButton"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

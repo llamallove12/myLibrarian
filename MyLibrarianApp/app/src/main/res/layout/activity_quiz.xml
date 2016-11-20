@@ -10,6 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sashahedges.mylibrarianapp.quiz">
 
+<<<<<<< HEAD
+    <TextView
+        android:text="We want to learn more about you!"
+        android:id="@+id/textView2"
+        android:layout_marginTop="50dp"
+        tools:textSize="50sp"
+        tools:textColor="@android:color/black"
+        android:layout_width="900px"
+        tools:textScaleX="1"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="400px" />
+
+    <Button
+        android:text="Let's do it!"
+        android:id="@+id/doIt"
+        android:background="?attr/colorButtonNormal"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_height="100px"
+        android:layout_width="400px"
+
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:text="Not Now"
+        android:layout_width="400px"
+        android:background="?attr/colorButtonNormal"
+        android:textColor="@android:color/black"
+        tools:textSize="20sp"
+        android:id="@+id/changeUserInfoButton"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/doIt"
+        android:layout_alignStart="@+id/doIt"
+        android:layout_marginBottom="67dp" />
+=======
     <Button
         android:text="Let's Do It!"
         android:layout_width="wrap_content"
@@ -37,4 +78,5 @@
         android:layout_above="@+id/doIt"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="99dp" />
+>>>>>>> 1a2fe986499980cc2e1120660a6187e8d205bc8b
 </RelativeLayout>
