@@ -35,7 +35,7 @@ public class editUserInfo extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        DBHandler db = new DBHandler(getApplicationContext());
+                        // DBHandler db = new DBHandler(getApplicationContext());
                         UserDB users = new UserDB(getApplicationContext());
                         User user = users.getUser(mApp.getUser());
 
@@ -43,14 +43,20 @@ public class editUserInfo extends AppCompatActivity {
                         String newPassword = editPassword.getText().toString(); // user input password
                         String newName = editName.getText().toString();         // user input name
 
-                        user.setUserName(newName);
-                        users.updateUser(currentUser, "Name");
+                        if (!newName.isEmpty()) {
+                            user.setUserName(newName);
+                            users.updateUser(currentUser, "Name");
+                        }
 
-                        user.setUserName(newEmail);
-                        users.updateUser(currentUser, "Email");
+                        if (!newEmail.isEmpty()) {
+                            user.setUserName(newEmail);
+                            users.updateUser(currentUser, "Email");
+                        }
 
-                        user.setUserName(newPassword);
-                        users.updateUser(currentUser, "Password");
+                        if (!newPassword.isEmpty()) {
+                            user.setUserName(newPassword);
+                            users.updateUser(currentUser, "Password");
+                        }
 
                         // user.setUserEmail(newEmail);            // updates the email
                         // user.setUserPassword(newPassword);      // updates the password
