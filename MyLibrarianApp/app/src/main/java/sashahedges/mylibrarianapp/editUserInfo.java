@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Objects;
@@ -26,15 +27,17 @@ public class editUserInfo extends AppCompatActivity {
         final EditText editName = (EditText) findViewById(R.id.nameTextBox);
 
         final AppVars mApp = ((AppVars)getApplicationContext());
-        int userID = mApp.getUser();
+        final int userID = mApp.getUser();
 
-        final UserDB users = new UserDB(getApplicationContext());
-        final User user = users.getUser(userID);
+
 
         saveAndCloseButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        UserDB users = new UserDB(getApplicationContext());
+                        User user = users.getUser(userID);
 
                         String newEmail = editEmail.getText().toString();       // user input email
                         String newPassword = editPassword.getText().toString(); // user input password
@@ -46,13 +49,15 @@ public class editUserInfo extends AppCompatActivity {
                         }
 
                         if (!newEmail.isEmpty()) {
-                            user.setUserName(newEmail);
+                            user.setUserEmail(newEmail);
                             users.updateUser(user, "Email");
+
                         }
 
                         if (!newPassword.isEmpty()) {
-                            user.setUserName(newPassword);
+                            user.setUserPassword(newPassword);
                             users.updateUser(user, "Password");
+                            Toast.makeText(v.getContext(), "here2", Toast.LENGTH_LONG).show();
                         }
 
                         // user.setUserEmail(newEmail);            // updates the email
@@ -60,6 +65,7 @@ public class editUserInfo extends AppCompatActivity {
                         // user.setUserName(newName);              // updates the name
 
                         Intent nextScreen = new Intent(v.getContext(),userProfile.class);
+
                         startActivity(nextScreen);
                     }
                 }
