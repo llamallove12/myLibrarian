@@ -22,11 +22,8 @@ public class PageAfterQuiz extends AppCompatActivity {
                         // go to next page
                         Intent nextScreen = new Intent(v.getContext(),MainActivity.class);
                         startActivity(nextScreen);
-
                     }
                 }
-
         );
-
     }
 }

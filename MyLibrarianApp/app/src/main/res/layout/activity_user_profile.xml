@@ -34,7 +34,6 @@
         android:layout_alignEnd="@+id/changeUserInfoButton" />
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/name"
@@ -104,7 +103,6 @@
         android:layout_alignEnd="@+id/UserProfileTitle" />
 
     <TextView
-        android:text="Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
