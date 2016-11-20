@@ -35,7 +35,7 @@ public class userProfile extends AppCompatActivity {
         final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
         final TextView nameDisplay = (TextView) findViewById(R.id.name);                    // displays the default user name
         final TextView emailDisplay = (TextView) findViewById(R.id.textView3);              // displays the default user email
-        
+
 
         AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
