@@ -66,15 +66,6 @@
         android:layout_alignStart="@+id/textView2" />
 
     <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2"
-        android:id="@+id/tempButton" />
-
-    <Button
         android:text="toHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

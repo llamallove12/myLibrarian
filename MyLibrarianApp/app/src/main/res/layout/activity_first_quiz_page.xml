@@ -100,14 +100,4 @@
         android:layout_toStartOf="@+id/half"
         android:layout_marginBottom="18dp" />
 
-    <TextView
-        android:text="What genres do you like?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:id="@+id/textView8"
-        android:textSize="30sp"
-        android:layout_below="@+id/half"
-        android:layout_centerHorizontal="true" />
-
 </RelativeLayout>
