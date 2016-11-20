@@ -34,8 +34,8 @@ public class userProfile extends AppCompatActivity {
         final AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
 
-        final UserDB users = new UserDB(getApplicationContext());
-        final User user = users.getUser(userID);
+        UserDB users = new UserDB(getApplicationContext());
+        User user = users.getUser(userID);
 
         final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton);     // recommendation button
         final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
