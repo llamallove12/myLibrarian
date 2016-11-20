@@ -19,13 +19,13 @@
         android:textSize="30sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
-        android:layout_marginTop="90dp"
-        android:id="@+id/QuizComplete"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="36sp"
         android:textAlignment="center"
         android:textColor="@android:color/black" />
+        <!-- android:layout_marginTop="90dp" -->
+        <!-- android:id="@+id/QuizComplete" -->
+        <!-- android:textSize="36sp" -->
+
 
     <Button
         android:text="Find a book!"
@@ -34,7 +34,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="99dp"
-=======
         android:textAlignment="center" />
 
     <Button
@@ -42,7 +41,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="53dp"
->>>>>>> 1a2fe986499980cc2e1120660a6187e8d205bc8b
         android:id="@+id/FindABookButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

@@ -31,21 +31,35 @@ public class userProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton);     // recommendation button
-        final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
-        final TextView nameDisplay = (TextView) findViewById(R.id.name);                    // displays the default user name
-        final TextView emailDisplay = (TextView) findViewById(R.id.textView3);              // displays the default user email
-
-
         final AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
 
         final UserDB users = new UserDB(getApplicationContext());
         final User user = users.getUser(userID);
 
+        final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton);     // recommendation button
+        final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
 
-        nameDisplay.setText(user.getUserName());   // displays the user's actual name
-        emailDisplay.setText(user.getUserEmail()); // displays the user's actual email
+        TextView nameDisplay = new TextView(this);
+        nameDisplay.setText(user.getUserName());
+        nameDisplay.setTextSize(20);
+        nameDisplay.setPadding(0,50,0,0);
+
+        TextView emailDisplay = new TextView(this);
+        emailDisplay.setText(user.getUserEmail());
+        emailDisplay.setTextSize(20);
+        emailDisplay.setPadding(0,50,0,0);
+
+
+        // final TextView nameDisplay = (TextView) findViewById(R.id.name);                    // displays the default user name
+        // final TextView emailDisplay = (TextView) findViewById(R.id.textView3);              // displays the default user email
+
+
+
+
+
+        // nameDisplay.setText(user.getUserName());   // displays the user's actual name
+        // emailDisplay.setText(user.getUserEmail()); // displays the user's actual email
 
         quizButton.setOnClickListener(
                 new View.OnClickListener() {
