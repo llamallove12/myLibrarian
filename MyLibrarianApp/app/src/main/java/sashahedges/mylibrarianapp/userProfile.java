@@ -35,16 +35,17 @@ public class userProfile extends AppCompatActivity {
         final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
         final TextView nameDisplay = (TextView) findViewById(R.id.name);                    // displays the default user name
         final TextView emailDisplay = (TextView) findViewById(R.id.textView3);              // displays the default user email
+        
 
         AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
 
-        UserDB udb = new UserDB(getApplicationContext());
-        List<User> allUsers = udb.getAllUsers();
-        User currentUser = udb.getUser(userID);
+        final UserDB users = new UserDB(getApplicationContext());
+        final User user = users.getUser(userID);
 
-        nameDisplay.setText(currentUser.getUserName());   // displays the user's actual name
-        emailDisplay.setText(currentUser.getUserEmail()); // displays the user's actual email
+
+        nameDisplay.setText(user.getUserName());   // displays the user's actual name
+        emailDisplay.setText(user.getUserEmail()); // displays the user's actual email
 
         quizButton.setOnClickListener(
                 new View.OnClickListener() {
