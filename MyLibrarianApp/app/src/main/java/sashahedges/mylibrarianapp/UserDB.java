@@ -83,6 +83,12 @@ public class UserDB extends SQLiteOpenHelper {
 
     }
 
+//    public boolean deleteBookList(int id)
+//    {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        return db.delete(TABLE_USERS, KEY_ID + "=" + id, null) > 0;
+//    }
+
     public User getUser(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS, new String[] {KEY_ID,
