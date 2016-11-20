@@ -84,20 +84,6 @@ public class login extends AppCompatActivity {
 
         );
 
-        tempButton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent nextScreen = new Intent(v.getContext(),userProfile.class);
-                        startActivity(nextScreen);
-
-
-                    }
-                }
-
-        );
-
         toHistory.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
