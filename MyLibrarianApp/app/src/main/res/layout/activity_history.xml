@@ -25,7 +25,7 @@
         android:layout_width="600px"
         android:layout_height="150px"
         android:id="@+id/addBookButton"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginBottom="11dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="History"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:id="@+id/historyTitle"
         android:textSize="36sp"

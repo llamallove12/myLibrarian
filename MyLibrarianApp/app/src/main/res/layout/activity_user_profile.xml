@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="User Profile"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:id="@+id/UserProfileTitle"
         android:textSize="36sp"
@@ -90,7 +91,8 @@
         android:layout_alignStart="@+id/textView"
         android:layout_marginBottom="11dp"
         android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignEnd="@+id/textView"
+        tools:textStyle="bold" />
 
     <ImageView
         android:layout_width="360px"

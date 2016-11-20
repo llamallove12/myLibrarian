@@ -37,9 +37,10 @@
             android:text="Search For A Book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
             android:id="@+id/SearchForABook"
             android:textSize="30sp"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
@@ -129,7 +130,8 @@
             android:layout_alignTop="@+id/textBox"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/searchButton" />
+            android:id="@+id/searchButton"
+            android:textSize="20sp" />
 
 
 

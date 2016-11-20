@@ -36,7 +36,7 @@ public class userProfile extends AppCompatActivity {
         final TextView nameDisplay = (TextView) findViewById(R.id.name); // displays the default user email
         final TextView emailDisplay = (TextView) findViewById(R.id.textView3); // displays the default user email
 
-        AppVars mApp = ((AppVars)getApplicationContext());
+        final AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
 
         UserDB udb = new UserDB(getApplicationContext());
@@ -76,17 +76,6 @@ public class userProfile extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
         addDrawerItems();
-        setupDrawer();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-    }
-
-    //HAMBURGER MENU
-    private void addDrawerItems() {
-        String[] osArray = {"FIND A BOOK", "User Profile", "Checkout History", "Main", "To Overdrive"};
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-        mDrawerList.setAdapter(mAdapter);
-
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
 
@@ -109,14 +98,28 @@ public class userProfile extends AppCompatActivity {
                         startActivity(nextScreen4);
                         break;
                     case 4:
-                        // Placeholder
-                        Intent nextScreen5 = new Intent(view.getContext(), userProfile.class);
+                        Intent nextScreen5 = new Intent(view.getContext(), Overdrive.class);
                         startActivity(nextScreen5);
+                        break;
+                    case 5:
+                        mApp.setUser(1);
+                        Intent nextScreen6 = new Intent(view.getContext(), login.class);
+                        startActivity(nextScreen6);
                         break;
                 }
             }
 
         });
+        setupDrawer();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+    }
+
+    //HAMBURGER MENU
+    private void addDrawerItems() {
+        String[] osArray = {"FIND A BOOK", "User Profile", "Checkout History", "Main", "To Overdrive", "Logout"};
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        mDrawerList.setAdapter(mAdapter);
     }
     private void setupDrawer(){
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {

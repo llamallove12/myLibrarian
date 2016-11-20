@@ -13,39 +13,40 @@
     <TextView
         android:text="We want to learn more about you!"
         android:id="@+id/textView2"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="50dp"
         tools:textSize="50sp"
-        tools:textStyle="bold"
         tools:textColor="@android:color/black"
         android:layout_width="900px"
         tools:textScaleX="1"
+        android:textSize="50sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="50sp"
-        android:layout_height="675px" />
-
-    <Button
-        android:text="Not Now"
-        android:layout_width="400px"
-        android:background="@android:color/darker_gray"
-        android:textColor="@android:color/black"
-        tools:textSize="20sp"
-        android:id="@+id/changeUserInfoButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/doIt"
-        android:layout_alignEnd="@+id/doIt"
-        android:layout_height="100px" />
+        android:layout_height="400px" />
 
     <Button
         android:text="Let's do it!"
         android:id="@+id/doIt"
-        android:background="@android:color/darker_gray"
+        android:background="?attr/colorButtonNormal"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:layout_height="100px"
         android:layout_width="400px"
-        android:layout_above="@+id/changeUserInfoButton"
+
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp" />
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:text="Not Now"
+        android:layout_width="400px"
+        android:background="?attr/colorButtonNormal"
+        android:textColor="@android:color/black"
+        tools:textSize="20sp"
+        android:id="@+id/changeUserInfoButton"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/doIt"
+        android:layout_alignStart="@+id/doIt"
+        android:layout_marginBottom="67dp" />
 </RelativeLayout>

@@ -16,11 +16,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addHistoryBookTitle"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/darker_gray"
         android:textSize="30sp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="19dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:textColor="@android:color/black" />
 
     <Button
         android:text="Add to History"
@@ -29,7 +30,8 @@
         android:id="@+id/addHistory"
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
 
     <EditText
         android:layout_width="wrap_content"
