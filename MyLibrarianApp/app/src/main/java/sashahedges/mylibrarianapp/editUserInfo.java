@@ -26,31 +26,34 @@ public class editUserInfo extends AppCompatActivity {
         final EditText editName = (EditText) findViewById(R.id.nameTextBox);
 
         final AppVars mApp = ((AppVars)getApplicationContext());
-        // int userID = mApp.getUser();
+        int userID = mApp.getUser();
 
-        // UserDB udb = new UserDB(getApplicationContext());
-        // currentUser = udb.getUser(userID);
+        final UserDB users = new UserDB(getApplicationContext());
+        final User user = users.getUser(userID);
 
         saveAndCloseButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        DBHandler db = new DBHandler(getApplicationContext());
-                        UserDB users = new UserDB(getApplicationContext());
-                        User user = users.getUser(mApp.getUser());
 
                         String newEmail = editEmail.getText().toString();       // user input email
                         String newPassword = editPassword.getText().toString(); // user input password
                         String newName = editName.getText().toString();         // user input name
 
-                        user.setUserName(newName);
-                        users.updateUser(currentUser, "Name");
+                        if (!newName.isEmpty()) {
+                            user.setUserName(newName);
+                            users.updateUser(user, "Name");
+                        }
 
-                        user.setUserName(newEmail);
-                        users.updateUser(currentUser, "Email");
+                        if (!newEmail.isEmpty()) {
+                            user.setUserName(newEmail);
+                            users.updateUser(user, "Email");
+                        }
 
-                        user.setUserName(newPassword);
-                        users.updateUser(currentUser, "Password");
+                        if (!newPassword.isEmpty()) {
+                            user.setUserName(newPassword);
+                            users.updateUser(user, "Password");
+                        }
 
                         // user.setUserEmail(newEmail);            // updates the email
                         // user.setUserPassword(newPassword);      // updates the password

@@ -18,9 +18,6 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
-
-        final Button tempButton = (Button) findViewById(R.id.tempButton); // this button is used to test out the user profile page
         final Button toHistory = (Button) findViewById(R.id.toHistory);
         final Button toSearch = (Button) findViewById(R.id.toSearchButt);
 
@@ -77,20 +74,6 @@ public class login extends AppCompatActivity {
 
                     Intent nextScreen = new Intent(v.getContext(),Registration.class);
                     startActivity(nextScreen);
-
-
-                    }
-                }
-
-        );
-
-        tempButton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent nextScreen = new Intent(v.getContext(),userProfile.class);
-                        startActivity(nextScreen);
 
 
                     }

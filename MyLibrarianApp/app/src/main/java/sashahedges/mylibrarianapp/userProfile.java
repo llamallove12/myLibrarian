@@ -31,25 +31,21 @@ public class userProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton); // recommendation button
-        final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton); // change user profile button
-        final TextView nameDisplay = (TextView) findViewById(R.id.name); // displays the default user email
-        final TextView emailDisplay = (TextView) findViewById(R.id.textView3); // displays the default user email
+        final Button quizButton = (Button) findViewById(R.id.recommendationQuizButton);     // recommendation button
+        final Button editProfileButton = (Button) findViewById(R.id.changeUserInfoButton);  // change user profile button
+        final TextView nameDisplay = (TextView) findViewById(R.id.name);                    // displays the default user name
+        final TextView emailDisplay = (TextView) findViewById(R.id.textView3);              // displays the default user email
+        
 
         final AppVars mApp = ((AppVars)getApplicationContext());
         int userID = mApp.getUser();
 
-        UserDB udb = new UserDB(getApplicationContext());
-        List<User> allUsers = udb.getAllUsers();
-        User currentUser = null;
-        for(User u : allUsers) {
-            if (Objects.equals(u.getUserId(), userID)) {
-                currentUser = u;     // gets the current user object
-            }
-        }
+        final UserDB users = new UserDB(getApplicationContext());
+        final User user = users.getUser(userID);
 
-        nameDisplay.setText(currentUser.getUserName());
-        emailDisplay.setText(currentUser.getUserEmail()); // displays the user's actual email
+
+        nameDisplay.setText(user.getUserName());   // displays the user's actual name
+        emailDisplay.setText(user.getUserEmail()); // displays the user's actual email
 
         quizButton.setOnClickListener(
                 new View.OnClickListener() {

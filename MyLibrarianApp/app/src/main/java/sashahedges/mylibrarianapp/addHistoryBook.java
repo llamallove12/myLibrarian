@@ -62,7 +62,7 @@ public class addHistoryBook extends AppCompatActivity {
                         user.setUserBookList(user.getUserBookList()+" / " + book.getTitle());
                         users.updateUser(user,"BookList");
 
-                        Toast.makeText(v.getContext(),user.getUserBookList()+"  "+user.getUserName(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(v.getContext(),user.getUserBookList()+"  "+user.getUserName() +mApp.getUser(),Toast.LENGTH_LONG).show();
 
 //                        TextView textView = new TextView(v.getContext());
 //                        textView.setText(bookName.getText().toString());
