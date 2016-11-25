@@ -30,15 +30,11 @@
         android:id="@+id/FindABookButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
         android:layout_marginTop="133dp"
-        android:id="@+id/findABookButton" />
-=======
         android:layout_marginBottom="138dp" />
     <!-- android:layout_marginTop="90dp" -->
         <!-- android:id="@+id/QuizComplete" -->
         <!-- android:textSize="36sp" -->
 
->>>>>>> 545c99620ed10243506ff5cee25902e804ae4bd1
 
 </RelativeLayout>
