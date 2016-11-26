@@ -44,27 +44,6 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:verticalScrollbarPosition="right"
-            android:visibility="visible"
-            android:scrollbars="vertical"
-            android:scrollIndicators="right"
-            android:scrollbarTrackVertical="@android:color/black"
-            android:layout_below="@+id/textView5"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="19dp"
-            android:id="@+id/listOfBooks">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/searchBookName" />
-        </LinearLayout>
-
         <RadioGroup
                 android:id="@+id/groupRadio"
                 android:layout_width="wrap_content"
@@ -96,7 +75,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="Here is what we found:"
+            android:text="Results:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -133,6 +112,25 @@
             android:id="@+id/searchButton"
             android:textSize="20sp" />
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:verticalScrollbarPosition="right"
+            android:visibility="visible"
+            android:scrollbars="vertical"
+            android:scrollIndicators="right"
+            android:scrollbarTrackVertical="@android:color/black"
+            android:id="@+id/listOfBooks"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchBookName" />
+        </LinearLayout>
 
 
 </RelativeLayout>
