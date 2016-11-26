@@ -21,6 +21,7 @@ public class login extends AppCompatActivity {
         // final Button toHistory = (Button) findViewById(R.id.toHistory);
         // final Button toSearch = (Button) findViewById(R.id.toSearchButt);
 
+
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
         final Button btnSignup = (Button) findViewById(R.id.recommendationQuizButton);
         final EditText editEmail = (EditText) findViewById(R.id.editEmail);

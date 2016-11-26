@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class Registration extends AppCompatActivity {
 
-    static int nextUp = 1;
+    //static int nextUp = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,26 +35,35 @@ public class Registration extends AppCompatActivity {
                 String pass2 = editPasswordConfirm.getText().toString();
 
                 // add vals to db
-                UserDB db = new UserDB(getApplicationContext());
-                if(pass.equals(pass2)){
 
+                if(pass.equals(pass2)){
+                    UserDB db = new UserDB(getApplicationContext());
                     //add user
-                    User user = new User(nextUp,name,email,pass,"","");
-                    nextUp++;
+
+                    int id = db.getAllUsers().size() + 1;
+                    User user = new User(id,name,email,pass,"","");
                     db.addUser(user);
+
+
 
                     //change global variable
                     AppVars mApp = ((AppVars)getApplicationContext());
                     mApp.setUser(user.getUserId());
 
+
+                    //Toast.makeText(v.getContext(),""+user.getUserId(),Toast.LENGTH_LONG).show();
+                    //Toast.makeText(v.getContext(),""+db.getUser(mApp.getUser()).getUserId(),Toast.LENGTH_LONG).show();
+
                     //go to next screen
                     Intent nextScreen = new Intent(v.getContext(),quiz.class);
                     startActivity(nextScreen);
 
+
+
                 }
                 else {
-                    //Toast.makeText(v.getContext(),"Passwords do not match: please try again",Toast.LENGTH_LONG).show();
-                    Toast.makeText(v.getContext(), Integer.toString(nextUp), Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(),"Passwords do not match: please try again",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(v.getContext(), Integer.toString(nextUp), Toast.LENGTH_LONG).show();
                     editPassword.setText("");
                     editPasswordConfirm.setText("");
 

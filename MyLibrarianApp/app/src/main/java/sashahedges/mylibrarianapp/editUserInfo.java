@@ -57,7 +57,7 @@ public class editUserInfo extends AppCompatActivity {
                         if (!newPassword.isEmpty()) {
                             user.setUserPassword(newPassword);
                             users.updateUser(user, "Password");
-                            Toast.makeText(v.getContext(), "here2", Toast.LENGTH_LONG).show();
+
                         }
 
                         // user.setUserEmail(newEmail);            // updates the email
