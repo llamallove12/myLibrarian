@@ -13,7 +13,7 @@ public class PageAfterQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_after_quiz);
 
-        final Button toMain = (Button) findViewById(R.id.findABookButton);
+        final Button toMain = (Button) findViewById(R.id.FindABookButton);
 
         toMain.setOnClickListener(
                 new View.OnClickListener() {

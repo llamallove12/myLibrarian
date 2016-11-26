@@ -18,8 +18,8 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        final Button toHistory = (Button) findViewById(R.id.toHistory);
-        final Button toSearch = (Button) findViewById(R.id.toSearchButt);
+        // final Button toHistory = (Button) findViewById(R.id.toHistory);
+        // final Button toSearch = (Button) findViewById(R.id.toSearchButt);
 
         final Button btnLogin = (Button) findViewById(R.id.btnLogin);
         final Button btnSignup = (Button) findViewById(R.id.recommendationQuizButton);
@@ -74,41 +74,8 @@ public class login extends AppCompatActivity {
 
                     Intent nextScreen = new Intent(v.getContext(),Registration.class);
                     startActivity(nextScreen);
-
-
                     }
                 }
-
         );
-
-        toHistory.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent nextScreen = new Intent(v.getContext(),history.class);
-                        startActivity(nextScreen);
-
-
-                    }
-                }
-
-        );
-
-        toSearch.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent nextScreen = new Intent(v.getContext(),SearchForABookPage.class);
-                        startActivity(nextScreen);
-
-
-                    }
-                }
-
-        );
-
-
     }
 }
