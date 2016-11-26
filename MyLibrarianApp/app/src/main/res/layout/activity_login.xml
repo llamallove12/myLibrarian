@@ -11,7 +11,7 @@
     tools:context="sashahedges.mylibrarianapp.login">
 
     <TextView
-        android:text="Login to MyLibrarian"
+        android:text="Log in to MyLibrarian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
