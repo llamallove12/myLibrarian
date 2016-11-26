@@ -24,13 +24,13 @@
         android:textColor="@android:color/black" />
 
     <Button
-        android:text="Button"
+        android:text="go to home page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/FindABookButton"
+        android:layout_marginBottom="139dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="138dp" />
+        android:layout_centerHorizontal="true" />
     <!-- android:layout_marginTop="90dp" -->
         <!-- android:id="@+id/QuizComplete" -->
         <!-- android:textSize="36sp" -->
