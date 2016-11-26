@@ -30,15 +30,8 @@
         android:id="@+id/FindABookButton"
         android:layout_marginBottom="139dp"
         android:layout_alignParentBottom="true"
-<<<<<<< HEAD
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="133dp"
-        android:layout_marginBottom="138dp" />
-=======
-
-        android:layout_centerHorizontal="true" />
-
->>>>>>> 75c920bbb069eb2c6d56b0b002c9ccf01a8c054d
+        android:layout_marginTop="133dp" />
     <!-- android:layout_marginTop="90dp" -->
         <!-- android:id="@+id/QuizComplete" -->
         <!-- android:textSize="36sp" -->

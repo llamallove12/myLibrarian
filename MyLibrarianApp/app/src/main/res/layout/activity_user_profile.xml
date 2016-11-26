@@ -42,7 +42,8 @@
         android:layout_alignBaseline="@+id/nameTextView"
         android:layout_alignBottom="@+id/nameTextView"
         android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_alignStart="@+id/textView3"
+        android:textAlignment="viewStart" />
 
     <Button
         android:text="Recommendation Quiz"
@@ -71,7 +72,7 @@
         android:id="@+id/textView"
         android:textSize="18sp"
         tools:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="?attr/colorControlNormal"
         android:layout_above="@+id/changeUserInfoButton"
         android:layout_marginBottom="28dp"
         android:layout_toLeftOf="@+id/changeUserInfoButton"
@@ -84,7 +85,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/nameTextView"
         android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:textColor="?attr/colorControlNormal"
         android:layout_above="@+id/textView3"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
@@ -100,7 +101,14 @@
         android:id="@+id/imageView"
         android:layout_below="@+id/UserProfileTitle"
         android:layout_alignRight="@+id/UserProfileTitle"
-        android:layout_alignEnd="@+id/UserProfileTitle" />
+        android:layout_alignEnd="@+id/UserProfileTitle"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -64,7 +64,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:text="Select Your Favorite Genres!"
+        android:text="Select Your Favorite Book Genres!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/genre"

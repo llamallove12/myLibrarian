@@ -28,7 +28,8 @@
         android:layout_alignStart="@+id/textView12"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_height="200px" />
+        android:layout_height="200px"
+        android:textSize="18sp" />
 
     <TextView
         android:text="Rating:"

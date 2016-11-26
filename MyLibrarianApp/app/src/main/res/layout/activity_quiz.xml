@@ -11,33 +11,41 @@
     tools:context="sashahedges.mylibrarianapp.quiz">
 
     <!--  android:id="@+id/changeUserInfoButton"  -->
-    <Button
-        android:text="Let's Do It!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_above="@+id/changeUserInfoButton"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/doIt" />
-        <!-- android:id="@+id/doIt" -->
-
-    <Button
-        android:text="Not Now"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/changeUserInfoButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+    <!-- android:id="@+id/doIt" -->
 
     <TextView
-        android:text="Take this two page quiz so we can learn more about you!"
+        android:text="Would you like to take a short quiz to help us improve your recommendations?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:id="@+id/textView7"
         android:textSize="30sp"
         android:textAlignment="center"
-        android:layout_above="@+id/doIt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="99dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <Button
+        android:text="Let's Do It!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doIt"
+        android:layout_marginTop="106dp"
+        android:layout_below="@+id/textView7"
+        android:layout_toLeftOf="@+id/changeUserInfoButton"
+        android:layout_marginRight="44dp"
+        android:layout_marginEnd="44dp" />
+
+    <Button
+        android:text="Not Now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeUserInfoButton"
+        android:layout_marginRight="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_alignBaseline="@+id/doIt"
+        android:layout_alignBottom="@+id/doIt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

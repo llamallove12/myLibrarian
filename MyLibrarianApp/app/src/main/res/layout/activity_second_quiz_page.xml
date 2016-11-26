@@ -68,7 +68,7 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:text="How did you like it?"
+        android:text="How would you rate the book?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nonessential"
