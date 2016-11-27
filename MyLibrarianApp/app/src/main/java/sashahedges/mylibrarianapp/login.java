@@ -78,5 +78,7 @@ public class login extends AppCompatActivity {
                     }
                 }
         );
+
+        editEmail.requestFocus();
     }
 }

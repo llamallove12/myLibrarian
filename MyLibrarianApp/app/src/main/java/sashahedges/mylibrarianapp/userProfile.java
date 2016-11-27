@@ -76,20 +76,20 @@ public class userProfile extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
+                        Intent nextScreen4 = new Intent(view.getContext(),MainActivity.class);
+                        startActivity(nextScreen4);
+                        break;
+                    case 1:
                         Intent nextScreen1 = new Intent(view.getContext(), SearchForABookPage.class);
                         startActivity(nextScreen1);
                         break;
-                    case 1:
+                    case 2:
                         Intent nextScreen2 = new Intent(view.getContext(), userProfile.class);
                         startActivity(nextScreen2);
                         break;
-                    case 2:
+                    case 3:
                         Intent nextScreen3 = new Intent(view.getContext(), history.class);
                         startActivity(nextScreen3);
-                        break;
-                    case 3:
-                        Intent nextScreen4 = new Intent(view.getContext(),MainActivity.class);
-                        startActivity(nextScreen4);
                         break;
                     case 4:
                         Intent nextScreen5 = new Intent(view.getContext(), Overdrive.class);
@@ -111,7 +111,7 @@ public class userProfile extends AppCompatActivity {
 
     //HAMBURGER MENU
     private void addDrawerItems() {
-        String[] osArray = {"FIND A BOOK", "User Profile", "Checkout History", "Main", "To Overdrive", "Logout"};
+        String[] osArray = {"Home Page", "Find a Book", "User Profile", "Checkout History", "To Overdrive", "Log Out"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
